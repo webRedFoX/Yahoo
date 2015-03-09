@@ -1,0 +1,69 @@
+@body-bg: #34495e;
+@container-large-desktop: (1240px + @grid-gutter-width);
+
+// COLORS
+@brand-danger: #e74c3c;
+@brand-warning: #34495e;
+@navbar-link-color: #ecf0f1;
+@border-radius-base: 4px;
+
+// Typography
+@font-size-base:  14px;
+@line-height-base:   1.428571429;
+
+// navbar 
+@navbar-height: 100px; 
+@navbar-default-bg: @brand-danger;
+@navbar-default-link-color: @navbar-link-color;
+@navbar-default-link-hover-color: @navbar-link-color;
+@navbar-default-link-hover-bg: @brand-warning;
+@navbar-default-link-active-bg: @brand-warning;
+@navbar-default-link-active-color: @navbar-link-color;
+
+// thumbnail
+@thumbnail-bg: darken(@body-bg, 5%);
+@thumbnail-border: lighten(@body-bg, 10%);
+@btn-default-bg: #ecf0f1;
+
+
+//== List group
+//** Background color on `.list-group-item`
+@list-group-bg:                 @brand-danger ;
+@list-group-hover-bg:           darken(@brand-warning, 10%);
+//** Text color of active list items
+@list-group-active-color:       #ecf0f1;
+//** Background color of active list items
+@list-group-active-bg:          darken(@brand-warning, 10%);
+//** Border color of active list elements
+@list-group-active-border:      darken(@brand-warning, 10%);
+@list-group-border:             darken(@brand-warning, 10%);
+//** Text color for content within active list items
+@list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
+
+//** Text color of disabled list items
+@list-group-disabled-color:      @gray-light;
+//** Background color of disabled list items
+@list-group-disabled-bg:         @gray-lighter;
+//** Text color for content within disabled list items
+@list-group-disabled-text-color: @list-group-disabled-color;
+
+@list-group-link-color:         #ecf0f1;
+@list-group-link-hover-color:   #ecf0f1;
+@list-group-link-heading-color: #ecf0f1;
+
+//== Jumbotron
+//
+//##
+
+@jumbotron-padding:              20px;
+@jumbotron-color:                spin(@brand-danger, -20);
+@jumbotron-bg:                   #ecf0f1;
+@jumbotron-heading-color:        inherit;
+@jumbotron-font-size:            ceil((@font-size-base * 1.5));
+
+//** Breadcrumb background color
+@breadcrumb-bg:                 #ecf0f1;
+//** Breadcrumb text color
+@breadcrumb-color:              @brand-danger;
+//** Text color of current page in the breadcrumb
+@breadcrumb-active-color:       @brand-warning;

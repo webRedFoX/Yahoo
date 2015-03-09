@@ -1,0 +1,229 @@
+@import "bootstrap/bootstrap.less";
+@import "variables.less"; 
+@import "components.less";
+@import "font-awesome/font-awesome.less";
+
+html, body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*:hover {
+	transition: all 0.3s ease-in-out;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #ecf0f1;
+}
+
+p {
+	font-size: 16px;
+	color: @brand-warning;
+	&.small {
+		font-size: 0.8em;
+	}
+}
+
+nav.navbar {
+	border: none;
+	border-radius: 0;
+	.navbar-header {
+		a.navbar-brand img {
+			margin-top: -30px;
+		}
+	}
+	
+	ul.navbar-nav {
+		font-size: 15px;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+}
+
+.thumbnail {
+	margin-top: 15px;
+}
+
+footer {
+	background: darken(#34495e, 10%);
+	height: 150px;
+}
+
+.copyright {
+	background: darken(#2c3e50, 10%);
+	margin-top: 40px;
+}
+
+.btn-social {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	border: 2px solid white;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 20px;
+	line-height: 45px;
+}
+.btn-outline {
+	color: white;
+	font-size: 20px;
+	border: solid 2px white;
+	background: transparent;
+	transition: all 0.3s ease-in-out;
+	margin-top: 15px;
+
+	&:hover {
+		color: @brand-danger;
+		background: white;
+		border: solid 2px white;
+	}
+}
+
+.page-header {
+margin: 0px 0 20px;
+border-bottom: 2px solid @brand-danger;
+}
+
+.list-group a {
+	font-weight: 700;
+}
+
+.breadcrumb a {
+	color: @brand-danger;
+	&.active {
+		color: @brand-warning;
+	}
+
+}
+
+.meta a {
+	color:  @brand-danger;
+}
+
+//== Forms
+//** `<input>` background color
+@input-bg:                       #fff;
+//** `<input disabled>` background color
+@input-bg-disabled:              @gray-lighter;
+
+//** Text color for `<input>`s
+@input-color:                    @gray;
+//** `<input>` border color
+@input-border:                   #ccc;
+
+// TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
+//** Default `.form-control` border radius
+@input-border-radius:            @border-radius-base;
+//** Large `.form-control` border radius
+@input-border-radius-large:      @border-radius-large;
+//** Small `.form-control` border radius
+@input-border-radius-small:      @border-radius-small;
+
+//** Border color for inputs on focus
+@input-border-focus:             #66afe9;
+
+//** Placeholder text color
+@input-color-placeholder:        #999;
+
+//** Default `.form-control` height
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+//** Large `.form-control` height
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+//** Small `.form-control` height
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+@legend-color:                   @gray-dark;
+@legend-border-color:            #e5e5e5;
+
+//** Background color for textual input addons
+@input-group-addon-bg:           @gray-lighter;
+//** Border color for textual input addons
+@input-group-addon-border-color: @input-border;
+
+//** Disabled cursor for form controls and buttons.
+@cursor-disabled:                not-allowed;
+
+.thumbnail .caption p {
+	color: #fff;
+}
+
+//Comments 
+/* Комментарии + форма */
+/* Контейнер комментария */
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	width: 650px;
+	margin: 10px auto;
+	display: table;
+}
+
+.commentlist .comment {
+	padding: 5px;
+	list-style: none;
+	display: block;
+}
+
+.commentlist .comment .comment {
+	margin: 10px 10px 10px 10px;
+	padding: 5px;
+	width: auto;
+}
+
+	/* Аватарка, имя */
+.comment-author {
+	width: 80px;
+	float: left;
+	text-align: center;
+}
+
+	/* Имя автора */
+.comment-author .fn {
+	font-weight: bold;
+}
+
+	/* двоеточие */
+.comment-author .says {
+	display: none;
+}
+
+	/* Сама аватарка тег img */
+.avatar {
+	width: 60px;
+	border-right: 1px solid #dedcdc;
+	border-bottom: 1px solid #dedcdc;
+	padding: 5px;
+	background: #f8f6f6;
+}
+
+	/* Дата добавления */
+.comment-meta {
+	width: 83%;
+	float: left;
+	border-bottom: 1px dashed #84a719;
+}
+
+	/* Текст комментария */
+.commentlist p {
+	margin: 15px 0 0px 20px;
+	padding-bottom: 10px;
+	width: 80%;
+	float: left;
+	border-bottom: 1px dashed #84a719;
+}
+
+	/* Кнопка "Ответить" */
+.commentlist .reply {
+	width: 98%;
+	float: left;
+	text-align: right;
+	padding: 0 0 5px 0;
+}
+
+	/* Форма отправки комментария */
+.form textarea {
+	resize: vertical;
+	width: 500px;
+	height: 150px;
+}
